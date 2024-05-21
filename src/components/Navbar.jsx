@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect } from 'react'
 
 
 import Logo from '../img/logo.png'
@@ -22,8 +22,13 @@ const Navbar = ({size}) => {
     setlogOpen(!logOpen);
     console.log("login done")
   }
-
   const location  = useLocation();
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
 
 
   const homeloc = location.pathname === '/'? 'text-[#23534f] border-b-[3px] border-[#088178]':'text-[black]'
