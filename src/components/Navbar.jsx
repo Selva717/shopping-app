@@ -48,9 +48,9 @@ const Navbar = ({size}) => {
 
     <div className='sticky   z-50 top-0'>
 
-        <div className='  flex gap-[60px] items-center p-[24px] px-[90px] bg-[#E3E6F3] justify-between shadow ' >
+        <div className='  flex  items-center p-[24px] px-[90px] bg-[#E3E6F3] justify-between shadow ' >
             
-            <Link to='/'><img src={Logo} alt="" /></Link>
+            <Link to='/'><img  src={Logo} alt="" /></Link>
 
 
 
@@ -72,9 +72,13 @@ const Navbar = ({size}) => {
 
           <div  className='min-[851px]:hidden justify-center gap-6 items-center flex  '>{!navOpen &&(
               
-              <svg onClick={handleNav}  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="min-[851px]:hidden max-[850px]:w-6 h-6 cursor-pointer  duration-75 transition-transform">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />  
-              </svg>
+              
+
+              <div>
+                  <svg onClick={handleNav}  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="min-[851px]:hidden max-[850px]:w-6 h-6 cursor-pointer  duration-75 transition-transform">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />  
+                </svg>
+              </div>
               )}
              <div className='relative'>
                 <Link to='/cart'  ><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={` min-[850px]:lg:w-8 h-8 ${cartloc} `}>
@@ -93,10 +97,10 @@ const Navbar = ({size}) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
 
-                <Link to='/' onClick={handleNav} className='p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75' >Home</Link>
-                <Link to='/shop' onClick={handleNav} className='p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75' >Shop</Link>
-                <Link to='/blog'onClick={handleNav} className='p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75' >Blog</Link>
-                <Link to='/contact'onClick={handleNav} className='p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75'>Contact Us</Link>
+                <Link to='/' onClick={handleNav} className={`p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75  ${homeloc}`} >Home</Link>
+                <Link to='/shop' onClick={handleNav} className={`p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75  ${shoploc}`} >Shop</Link>
+                <Link to='/blog'onClick={handleNav} className={`p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75  ${blogloc}`} >Blog</Link>
+                <Link to='/contact'onClick={handleNav} className={`p-4 text-[#1a1a1a] hover:border-b-[3px] hover:text-[#23534f]   border-[#088178]  duration-75  ${contloc}`}>Contact Us</Link>
               </div>
                 
             )}
@@ -110,8 +114,8 @@ const Navbar = ({size}) => {
        
   {logOpen && (
   <div className='fixed inset-0 flex items-center justify-center z-50 '>
-    <div className=' p-16 rounded-lg relative bg-[#dee1e2]'>
-      <div className='absolute top-8 text-2xl font-bold text-[#088178]'>Login</div>
+    <div className=' p-16 rounded-lg relative bg-[#dee1e2]  max-[600px]:m-3'>
+      <div className='absolute top-8 text-2xl font-bold text-[#088178] max-[600px]:text-[20px]'>Login</div>
       <svg onClick={handleLogin} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-1 right-1 si cursor-pointer w-10 h-10">
         <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
       </svg>
@@ -122,7 +126,7 @@ const Navbar = ({size}) => {
                     <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
                 </svg>
           </span>
-            <div className='text-2xl font-mono '>Continue with Gmail</div>
+            <div className='text-2xl font-mono  max-[600px]:text-[20px]'>Continue with Gmail</div>
         </div>
         <div className='flex gap-8 items-center border border-solid  shadow-2xl	 py-2 px-1 rounded-[6px] my-[40px] '>
           <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#355fea]">
@@ -130,13 +134,13 @@ const Navbar = ({size}) => {
                   <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
               </svg>
           </span>
-            <div className='text-2xl font-mono '>Continue with Facebook</div>
+            <div className='text-2xl font-mono  max-[600px]:text-[20px]'>Continue with Facebook</div>
         </div>
       </div>
       <div className='border border-solid mt-[120px]'></div>
       <div className='flex gap-8 w-[auto] justify-center mt-2'>
-         <div className=''>new user?</div>
-         <span className='text-[#088178] font-bold cursor-pointer '>Sign up</span>
+         <div className=' max-[600px]:text-[20px]'>new user?</div>
+         <span className='text-[#088178] font-bold cursor-pointer  max-[600px]:text-[20px]'>Sign up</span>
 
       </div>
     </div>

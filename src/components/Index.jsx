@@ -11,9 +11,12 @@ import NewArrShopcard from './NewArrShopcard'
 // import Morebanner from './components/Morebanner';
 import Newsletter from './Newsletter';
 import Footer from './footer';
+import { Link } from 'react-router-dom'
 
 
 const Index = ({handleClick}) => {
+
+  
   return (
     <>
     <div className='relative text-center'>
@@ -26,7 +29,9 @@ const Index = ({handleClick}) => {
 
               <div className='relative w-[100%] m-8'>
                   <img src={button} alt="" />
-                  <button className='absolute top-0  left-0 transform -translate-x-[-80%] -translate-y-[-50%] text-[#088178] font-bold'>Shop Now!</button>
+                  <Link to={'/shop'}>
+                    <button className='absolute top-0  left-0 transform -translate-x-[-80%] -translate-y-[-50%] text-[#088178] font-bold'>Shop Now!</button>
+                  </Link>
               </div>             
         </div>
        

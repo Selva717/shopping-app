@@ -1,5 +1,7 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
+import {useLocation} from 'react-router-dom'
+
 import Shopcards from '../Shopcards'
 import NewArrShopcard from '../NewArrShopcard'
 import b1 from '../../img/banner/b1.jpg'
@@ -11,17 +13,32 @@ import Footer from '../../components/footer';
 
 const shop = ({handleClick}) => {
     const [shopPage,setShop] = useState(true);
-    
+    const location  = useLocation();
+
 
     function handleShop(){
         setShop(!shopPage);
+        
     }
 
     const [newArrivals,setNewArrivals] = useState(false);
 
+
     function handleNew(){
         setNewArrivals(!newArrivals)
+        
     }
+
+    const smoothScrollToTop = () => {
+        window.scrollTo({
+          top: 180, 
+          behavior: 'smooth'
+        });
+      };
+
+    useEffect(() => {
+    smoothScrollToTop();
+  }, [shopPage, newArrivals]);
 
   return (
     <div>
@@ -42,8 +59,8 @@ const shop = ({handleClick}) => {
         }
 
         <div className='text-center'>
-            <button onClick={()=> {handleNew();handleShop()}}  className='bg-[#088178] px-[10px] py-[5px] text-[white] mx-[10px] my-[20px]'>1</button>
-            <button onClick={()=> {handleShop();handleNew()}} className='bg-[#088178] px-[10px] py-[5px] text-[white]  my-[20px]'>2</button>
+            <button onClick={()=> {handleNew();handleShop();scroll()}}  className='bg-[#088178] px-[10px] py-[5px] text-[white] mx-[10px] my-[20px]'>1</button>
+            <button onClick={()=> {handleShop();handleNew();scroll()}} className='bg-[#088178] px-[10px] py-[5px] text-[white]  my-[20px]'>2</button>
         </div>
         <hr/>
       <Footer/>

@@ -79,11 +79,11 @@ const Blog = () => {
                     <div className='w-3/4 my-[100px] mx-auto'>
                         <div className='text-8xl font-extrabold text-[#9e9b9b]'>{data.no}</div>
                         
-                        <div className='flex items-center gap-12'>  
-                            <img className='w-1/2 h-[400px] object-cover m-[-20px]'  src={data.img} alt="" />
+                        <div className='flex items-center gap-12  max-[600px]:flex-col'>  
+                            <img className='w-1/2 h-[400px] object-cover m-[-20px]  '  src={data.img} alt="" />
                             <div>
-                                <div className='font-bold text-4xl mb-11'>{data.title}</div>
-                                <div  className='font-normal text-[#514f4f] text-2xl mb-11'>{data.dec}</div>
+                                <div className='font-bold text-4xl mb-11  max-[600px]:text-[23px]'>{data.title}</div>
+                                <div  className='font-normal text-[#514f4f] text-2xl mb-11 max-[700px]:text-[18px]'>{data.dec}</div>
                             </div>
                         </div>
                     </div>

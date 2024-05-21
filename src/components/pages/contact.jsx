@@ -14,7 +14,7 @@ const contact = () => {
              </div>
         </div>
 
-        <div className='flex w-4/5 my-[50px] mx-auto justify-around items-center'>
+        <div className='flex w-4/5 my-[50px] mx-auto justify-around items-center max-[1000px]:flex-col  max-[1000px]:gap-3'>
             <div>
                 <div className='font-medium mb-[20px]'>GET IN TOUCH</div>
                 <div  className='text-4xl font-medium mb-[20px]'>Vist one of our agency location or contact us</div>
@@ -45,7 +45,7 @@ const contact = () => {
             </div>
             
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.652899174609!2d76.99885565!3d11.026377549999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8562665571b65%3A0xa84174cbb7442460!2sRadisson%20Blu%20Hotel%20Coimbatore!5e0!3m2!1sen!2sin!4v1711345497034!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe  className=' max-[1000px]:w-[700px]   max-[770px]:w-[90%]' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.652899174609!2d76.99885565!3d11.026377549999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8562665571b65%3A0xa84174cbb7442460!2sRadisson%20Blu%20Hotel%20Coimbatore!5e0!3m2!1sen!2sin!4v1711345497034!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 

@@ -61,7 +61,7 @@ const Cart = ({ size, cartlist, onSizeChange }) => {
             {!noCart && (
                 <div >
                     {cartList.map((data, index) => (
-                        <div key={index} className=' w-[80%] my-[20px] mx-[auto] max-[1200px]:w-[auto] ' >
+                        <div key={index} className='  my-[20px] mx-[auto] ' >
                             <table className=' w-[100%] h-[px] text-center border border-solid border-black'>
                                 <tbody>
                                     <tr className='border border-solid font-serif text-1xl '>
@@ -71,7 +71,7 @@ const Cart = ({ size, cartlist, onSizeChange }) => {
                                         <th className='p-10 border border-solid border-[#cdc5c5] bg-[#E3E6F3] max-[1200px]:hidden max-[1200px]:text-xs'>Price</th>
                                         <th className='p-10 border border-solid border-[#cdc5c5] bg-[#E3E6F3] max-[1200px]:p-3 max-[1200px]:text-xs'>Quantity</th>
                                         <th className='p-10 border border-solid border-[#cdc5c5] bg-[#E3E6F3] max-[1200px]:p-3 max-[1200px]:text-xs'>Edit</th>
-                                        <th className='p-10 border border-solid border-[#cdc5c5] bg-[#E3E6F3] max-[1200px]:p-3 max-[1200px]:text-xs'>Subtotal</th>
+                                        <th className='p-10 border border-solid border-[#cdc5c5] bg-[#E3E6F3] max-[1200px]:p-2 max-[1200px]:text-xs'>Subtotal</th>
                                     </tr>
                                     <tr className='border border-solid text-lg '>
                                         <td className='p-10 border border-solid border-[#cdc5c5] bg-[#eeeef1] max-[1200px]:hidden '><div>{index + 1}</div></td>
@@ -86,7 +86,7 @@ const Cart = ({ size, cartlist, onSizeChange }) => {
                                                 <button onClick={() => increase(index)} className='border border-solid bg-[#088178] text-[white]  px-2 py-0 font-bold  rounded-[4px]'>+</button>
                                             </div>
                                         </td>
-                                        <td className='p-10 border border-solid border-[#eee6e6] bg-[#eeeef1]'><div> <span className='font-bold mr-1'>₹</span> {(data.que) * (data.price)}</div></td>
+                                        <td className='p-10 border border-solid border-[#eee6e6] bg-[#eeeef1] max-[1200px]:p-3 max-[1200px]:text-xs'><div> <span className='font-bold mr-1'>₹</span> {(data.que) * (data.price)}</div></td>
                                     </tr>
                                 </tbody>
                             </table>
